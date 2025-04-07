@@ -2,11 +2,13 @@
 // Q1
 let nickName = '安本';
 let age = 30;
-let message = `私のニックネームは${nickName}です。年齢は${age}歳です。`
+let message = '私のニックネームは' + nickName + 'です。年齢は' + age + '歳です。';
+
 console.log(message);
 
 // Q2
 let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
+
 console.log(`私の好きな言語は${languages[0]}です。次は${languages[3]}を勉強してみたいです。`);
 
 // Q3
@@ -42,12 +44,13 @@ console.log(playerList[1].favorites[1]);
 
 // Q5
 let totalAge = 0;
-
 for (let index = 0; index < playerList.length; index++) {
     totalAge += playerList[index].age
 }
 
-console.log(`平均は${totalAge / playerList.length}歳`);
+let ageAve = totalAge / playerList.length;
+
+console.log(`平均は${ageAve}歳`);
 
 // Q6
 function sayHello() {
@@ -55,7 +58,6 @@ function sayHello() {
 }
 
 sayHello();
-
 
 let sayWorld = function(msg) {
     console.log(msg);
@@ -77,6 +79,7 @@ user.sayhello('Hello！');
 
 // Q8
 let calc = {};
+
 console.log(calc);
 
 calc.add = function(x, y) {
@@ -100,21 +103,22 @@ calc.multiply = function(x, y) {
 
 calc.multiply(7, 7);
 
-
-calc.devide = function(x, y) {
+calc.divide = function(x, y) {
     const num = x / y;
     console.log(num);
 };
 
-calc.devide(15,3);
+calc.divide(15,3);
 
 // Q9
 function remainder (x, y) {
     const num = x % y;
-    console.log(`${x} を ${y} で割った余りは ${num} です。`); 
+    return x + 'を' + y + 'で割った余りは' + num + 'です。';
 }
 
 remainder(5, 3);
+
+console.log(remainder(5,3));
 
 // Q10
 // スコープとは定義した変数を参照できる範囲のことで
@@ -124,28 +128,26 @@ remainder(5, 3);
 
 // 応用編
 // Q1
-console.log(Math.floor(Math.random() * 10));
+let randomNum = Math.floor(Math.random() * 10);
+console.log(randomNum);
 
 // Q2
-
 setTimeout(() => {
   console.log('Hello World!');
 },3000);
 
 // Q3
-
 let num = 2;
 
 if (num > 0) {
     console.log('num is greater than 0');
-} else if (num == 0) {
+} else if (num === 0) {
     console.log('num is 0');
 } else if (num < 0) {
     console.log('num is less than 0');
 }
 
 // Q4
-
 let numbers = [];
 for (let index = 0; index < 100; index++) {
     numbers.push(index);
@@ -155,14 +157,12 @@ console.log(numbers);
 
 // Q5
 let mixed = [4, '2', 5, '8', '9', 0, 1];
-
 for (let index = 0; index < mixed.length; index++) {
-    if (typeof(mixed[index]) === 'number' && mixed[index] % 2 == 1) {
-        console.log('odd');
-    } else if (typeof(mixed[index]) === 'number' && mixed[index] % 2 == 0) {
-        console.log('even');
-    } else {
+   if (typeof(mixed[index]) !== 'number') {
         console.log('not number');
-    }
-
+   } else if (mixed[index] % 2 === 1 ) {
+        console.log('odd');
+   } else {
+        console.log('even');
+   }
 }
