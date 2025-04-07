@@ -157,8 +157,6 @@ console.log(numbers);
 let mixed = [4, '2', 5, '8', '9', 0, 1];
 
 for (let index = 0; index < mixed.length; index++) {
-    //console.log(mixed[index]);
-    //console.log(typeof　mixed[index]);
     if (typeof(mixed[index]) === 'number' && mixed[index] % 2 == 1) {
         console.log('odd');
     } else if (typeof(mixed[index]) === 'number' && mixed[index] % 2 == 0) {
