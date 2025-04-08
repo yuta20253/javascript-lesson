@@ -63,9 +63,6 @@ function sayHello(str) {
 let sayGreeting = sayHello('Hello');
 console.log(sayGreeting);
 
-// let sayWorld = function(msg) {
-//     console.log(msg);
-// };
 let sayWorld = function(msg) {
     let sayWorld = msg;
     return sayWorld;
@@ -130,11 +127,6 @@ console.log(subtractNums);
 
 
 // Q9
-// function remainder (x, y) {
-//     const num = x % y;
-//     return x + 'を' + y + 'で割った余りは' + num + 'です。';
-// }
-
 function remainder (x, y) {
     const num = x % y;
     return num;
