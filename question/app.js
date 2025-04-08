@@ -8,8 +8,10 @@ console.log(message);
 
 // Q2
 let languages = ['JavaScript', 'PHP', 'Ruby', 'Python', 'Go'];
+let secondMessage =  `私の好きな言語は${languages[0]}です。次は${languages[3]}を勉強してみたいです。`;
 
-console.log(`私の好きな言語は${languages[0]}です。次は${languages[3]}を勉強してみたいです。`);
+console.log(secondMessage);
+
 
 // Q3
 let user = {
@@ -53,17 +55,24 @@ let ageAve = totalAge / playerList.length;
 console.log(`平均は${ageAve}歳`);
 
 // Q6
-function sayHello() {
-    console.log('Hello');
+function sayHello(str) {
+    let greeting = str
+    return greeting;
 }
 
-sayHello();
+let sayGreeting = sayHello('Hello');
+console.log(sayGreeting);
 
+// let sayWorld = function(msg) {
+//     console.log(msg);
+// };
 let sayWorld = function(msg) {
-    console.log(msg);
+    let sayWorld = msg;
+    return sayWorld;
 };
 
-sayWorld('World');
+let world = sayWorld('World');
+console.log(world);
 
 // Q7
 user.birthday = '2000-09-27';
@@ -84,41 +93,56 @@ console.log(calc);
 
 calc.add = function(x, y) {
     const sum = x + y;
-    console.log(sum);
+    return sum;
 };
 
-calc.add(3, 4);
+console.log(calc.add(3, 4));
 
 calc.subtract = function(x, y) {
     const num = x - y;
-    console.log(num);
+   return num
 };
 
-calc.subtract(18,8);
+console.log(calc.subtract(18,8));
 
 calc.multiply = function(x, y) {
     const num = x * y;
-    console.log(num);
+    return num;
 };
 
-calc.multiply(7, 7);
+console.log(calc.multiply(7, 7));
 
 calc.divide = function(x, y) {
     const num = x / y;
-    console.log(num);
+    return num;
 };
+console.log(calc.divide(15,3));
 
-calc.divide(15,3);
+
+//追加課題
+// 123 + 28 * 39 - 1100 + 2を計算
+
+let multiplyNums = calc.multiply(28, 39);
+let addNums = calc.add(123, 2);
+let addTwoTotalNums = calc.add(multiplyNums, addNums);
+let subtractNums = calc.subtract(addTwoTotalNums, 1100 );
+console.log(subtractNums);
+
 
 // Q9
+// function remainder (x, y) {
+//     const num = x % y;
+//     return x + 'を' + y + 'で割った余りは' + num + 'です。';
+// }
+
 function remainder (x, y) {
     const num = x % y;
-    return x + 'を' + y + 'で割った余りは' + num + 'です。';
+    return num;
 }
 
-remainder(5, 3);
-
-console.log(remainder(5,3));
+let remainderNum = remainder(5,3);
+let questionMessageOf9 = '5 を 3 で割った余りは' + remainderNum  + 'です。';
+console.log(questionMessageOf9);
 
 // Q10
 // スコープとは定義した変数を参照できる範囲のことで
