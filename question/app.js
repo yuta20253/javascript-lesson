@@ -147,7 +147,6 @@ console.log(randomNum);
 setTimeout(() => {
   console.log('Hello World!');
 },3000);
-console.log(setTimeout)
 
 // Q3
 let num = 2;
