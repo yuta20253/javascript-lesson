@@ -56,9 +56,10 @@ console.log(`平均は${ageAve}歳`);
 
 // Q6
 function sayHello(str) {
-    let greeting = str
-    return greeting;
+    console.log(str);
 }
+
+sayHello('Hello');
 
 let sayGreeting = sayHello('Hello');
 console.log(sayGreeting);
@@ -119,12 +120,7 @@ console.log(calc.divide(15,3));
 //追加課題
 // 123 + 28 * 39 - 1100 + 2を計算
 
-let multiplyNums = calc.multiply(28, 39);
-let addNums = calc.add(123, 2);
-let addTwoTotalNums = calc.add(multiplyNums, addNums);
-let subtractNums = calc.subtract(addTwoTotalNums, 1100 );
-console.log(subtractNums);
-
+console.log(calc.add(123, (calc.multiply(28,39)) + calc.add(-1100, 2)));
 
 // Q9
 function remainder (x, y) {
@@ -151,6 +147,7 @@ console.log(randomNum);
 setTimeout(() => {
   console.log('Hello World!');
 },3000);
+console.log(setTimeout)
 
 // Q3
 let num = 2;
